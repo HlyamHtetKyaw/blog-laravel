@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Product\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +33,8 @@ Route::get('/articles/details/{id}',[
 Route::get('/articles/more',function(){
     return redirect() -> route('articles.details');
 });
+
+Route::get('/products', [
+    ProductController::class,
+    'index'
+]);
