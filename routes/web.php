@@ -38,3 +38,6 @@ Route::get('/products', [
     ProductController::class,
     'index'
 ]);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
