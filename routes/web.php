@@ -40,4 +40,10 @@ Route::get('/products', [
 ]);
 Auth::routes();
 
+Route::get('/articles/add',[ArticleController::class,'add']);
+
+Route::post('artitles/add',[ArticleController::class,'create']);
+
+Route::get('/articles/delete/{id}',[ArticleController::class,'delete']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
