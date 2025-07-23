@@ -28,6 +28,14 @@ class ArticleController extends Controller
     }
 
     public function create(){
+        $validator = validator(request()->all(),[
+            'title'=>'required',
+            'body'=>'required',
+            'category_id'=>'required',
+        ]);
+        if($validator->fails()){
+            return back()->withErrors($validator);
+        }
         $article = new Article();
         $article->title = request()->title;
         $article->body = request()->body;

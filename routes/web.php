@@ -42,7 +42,7 @@ Auth::routes();
 
 Route::get('/articles/add',[ArticleController::class,'add']);
 
-Route::post('artitles/add',[ArticleController::class,'create']);
+Route::post('/articles/add',[ArticleController::class,'create']);
 
 Route::get('/articles/delete/{id}',[ArticleController::class,'delete']);
 
