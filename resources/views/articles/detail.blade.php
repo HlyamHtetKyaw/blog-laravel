@@ -22,7 +22,7 @@
             </li>
             @foreach ($article->comments as $comment)
                 <li class="list-group-item">
-                    <a href="{{ url("/Comments/delete/$comment->id") }}"
+                    <a href="{{ url("/comments/delete/$comment->id") }}"
                     class="btn-close float-end"></a>
                     {{ $comment->content }}
                     <div class="small mt-2">
