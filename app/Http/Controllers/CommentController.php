@@ -12,7 +12,7 @@ class CommentController extends Controller
     }
     public function create(){
         $comment = new Comment();
-        $comment->content = request()->content;
+        $comment->content = request()->input('content');
         $comment->article_id = request()->article_id;
         $comment->save();
         return back();
